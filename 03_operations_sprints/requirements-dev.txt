@@ -1,0 +1,3 @@
+# Test dependencies for 03_operations_sprints. The router itself uses only the standard library.
+# Install: python3 -m venv .venv && .venv/bin/python -m pip install -r 03_operations_sprints/requirements-dev.txt
+pytest==9.1.1

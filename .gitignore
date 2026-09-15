@@ -1,0 +1,62 @@
+# AI Ops workspace: files that must never be committed.
+# Keep generated artifacts, local environments, and secrets out of version control.
+
+# --- Python virtual environments -------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# --- Python bytecode and build output --------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Test, coverage, and type-checker artifacts ----------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+junit*.xml
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+
+# --- JavaScript dependencies -----------------------------------------------
+node_modules/
+
+# --- Secrets and local configuration (never commit credentials) ------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# --- Operating system files ------------------------------------------------
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+Desktop.ini
+
+# --- Editors and IDEs (personal settings) ----------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Logs and temporary files ----------------------------------------------
+*.log
+*.tmp
+tmp/
