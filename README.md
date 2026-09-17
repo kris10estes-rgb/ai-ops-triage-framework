@@ -32,6 +32,12 @@ python 03_operations_sprints/triage_router.py --self-test
 ./03_operations_sprints/workspace_sweep.sh
 ```
 
+## Two deviations, on purpose
+
+**The repo is `ai-ops-triage-framework`; the folder on my machine is `ai-ops-workspace`.** The public name describes the artifact, the local name describes the working directory it grew in. Renaming either side costs more than the mismatch does: the GitHub name is already linked publicly, and the local path is baked into the virtualenv. Clone it under whatever name you like. Revisit if a second framework ever ships from the same workspace.
+
+**`03_operations_sprints/` keeps its tests beside its source**, while my other repos use a package plus a `tests/` folder. `pytest.ini` pins `testpaths` so the suite runs from either directory, and a 1530-line module with a 535-line suite is not worth an import rewrite that buys only consistency. Revisit when a second module lands in that folder, since that is the point where a package earns its keep.
+
 ## What it is not
 
 This is a prototype. The model calls are simulated so the tests run in a tenth of a second and cost nothing. Two backlog items are open on purpose: the live traffic kill switch (K4) needs real traffic data, and the merge logic needs re-checking against real model output in shadow mode. Both are logged in `SPRINT_BACKLOG.md`.
